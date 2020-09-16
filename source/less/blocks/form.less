@@ -54,6 +54,7 @@
 }
 
 .form__input {
+  position: relative;
   width: 100%;
   padding: 12px 0;
   padding-left: 13px;
@@ -63,7 +64,35 @@
   line-height: 19px;
   color: @form-black;
 
-  border: 1px solid @bg-grey;
+  border: 1px solid #e7e7e7;
+
+  &:hover {
+    border: 1px solid @border-grey;
+  }
+
+  &:focus {
+    outline: 2px solid @text-grey;
+  }
+
+  &:invalid {
+    outline: 2px solid @peach;
+  }
+}
+
+.form__icon--email,
+.form__icon--phone {
+  position: absolute;
+  top: 50%;
+}
+
+.form__icon--email {
+  right: 17px;
+  margin-top: -6px;
+}
+
+.form__icon--phone {
+  right: 15px;
+  margin-top: -10px;
 }
 
 .form__list {
