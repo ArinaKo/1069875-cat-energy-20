@@ -2,6 +2,8 @@
   position: relative;
 
   text-align: center;
+
+  border-bottom: 1px solid @bg-grey;
 }
 
 .main-nav__toggle {
@@ -15,6 +17,7 @@
   height: 66px;
 
   cursor: pointer;
+  background-color: transparent;
   border: none;
 }
 
@@ -67,6 +70,10 @@
 }
 
 @media (min-width: @tablet) {
+  .main-nav {
+    border: none;
+  }
+
   .main-nav__toggle {
     display: none;
   }
