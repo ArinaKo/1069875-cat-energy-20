@@ -47,12 +47,15 @@
 }
 
 @media (min-width: @tablet) {
+  .exemple {
+    background-image: linear-gradient(to top, @bg-grey 462px, @white 462px);
+  }
+
   .exemple__wrapper {
     .container-tablet();
 
     padding-top: 45px;
     padding-bottom: 73px;
-    /* background-image: linear-gradient(to bottom, @white, @bg-grey); */
   }
 
   .exemple__info {
@@ -78,8 +81,8 @@
 
   .exemple__cost {
     position: absolute;
-    bottom: 0px;
-    right: 31px;
+    bottom: 5px;
+    right: 0px;
 
     width: 190px;
 
@@ -90,6 +93,10 @@
 }
 
 @media (min-width: @desktop) {
+  .exemple {
+    background-image: linear-gradient(to bottom, @white 192px, @bg-grey 192px);
+  }
+
   .exemple__wrapper {
     display: flex;
 
@@ -99,10 +106,10 @@
 
   .exemple__info {
     box-sizing: border-box;
-    padding: 0;
+    margin-bottom: 70px;
     padding-top: 57px;
     padding-left: 30px;
-    padding-right: 170px;
+    padding-right: 120px;
   }
 
   .exemple__title {
@@ -124,5 +131,9 @@
 
     display: flex;
     width: 330px;
+
+    span {
+      margin-left: 64px;
+    }
   }
 }
