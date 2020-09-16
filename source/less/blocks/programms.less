@@ -91,20 +91,31 @@
   font-size: 16px;
   line-height: 16px;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .programms__link::after {
   position: absolute;
-  right: -37px;
+  right: -45px;
   top: 50%;
 
-  width: 24px;
-  height: 12px;
+  width: 32px;
+  height: 10px;
   margin-top: -6px;
 
   content: "";
   background-image: url("../../img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;
+}
+
+.programms__link:hover,
+.programms__link:active {
+  &::after {
+    background-image: url("../../img/icon-right-arrow-verylong.svg");
+  }
 }
 
 @media (min-width: @tablet) {
@@ -171,7 +182,7 @@
   }
 
   .programms__link::after {
-    right: -47px;
+    right: -58px;
   }
 }
 
