@@ -72,10 +72,18 @@
 
   &:focus {
     outline: 2px solid @text-grey;
+
+    & + .form__icon {
+      fill: @green;
+    }
   }
 
   &:invalid {
     outline: 2px solid @peach;
+
+    & + .form__icon {
+      fill: @peach;
+    }
   }
 }
 
@@ -106,6 +114,18 @@
   margin: 0;
   padding: 5px 0;
   padding-left: 46px;
+
+  &:hover::before {
+    border: 1px solid @border-grey-hvr;
+  }
+
+  &:active {
+    color: fade(@form-black, 30%);
+
+    &::before {
+      border: 1px solid fade(@border-grey-hvr, 30%);
+    }
+  }
 }
 
 .form__label--radio::before,
@@ -136,6 +156,10 @@
 
   background-color: @green;
   border-radius: 50%;
+}
+
+.form__label--radio:active::after {
+  opacity: 0.3;
 }
 
 .form__box:checked + .form__label--checkbox::after {

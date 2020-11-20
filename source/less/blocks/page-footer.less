@@ -20,6 +20,16 @@
   margin-bottom: 26px;
 }
 
+.page-footer__logo[href] {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .page-footer__social {
   margin-bottom: 20px;
 }
@@ -33,6 +43,20 @@
 
   color: @text-grey;
   text-decoration: none;
+
+  svg {
+    fill: #666666;
+  }
+
+  &:hover {
+    svg {
+      fill: @green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {
